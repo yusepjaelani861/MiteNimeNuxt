@@ -61,23 +61,22 @@
             </div>
 
             <p class="text-justify mb-4 font-light">
-                {{  anime.description }}
+                {{ anime.description }}
             </p>
 
             <div class="bg-gray-300 p-1 mb-4">
                 <div class="bg-gray-800 text-gray-300 px-4 py-2 mb-2 border-l-4 border-blue-500">
                     Download {{ anime.title }}
                 </div>
-                <div class="bg-white overflow-auto">
+                <div class="bg-white md:overflow-auto overflow-auto">
                     <div v-for="download in anime.downloads"
                         class="bg-white shadow-sm md:text-xs w-full text-md text-center text-gray-700 md:flex items-center p-2 mr-2">
                         <p class="bg-slate-700 text-white py-1 px-2 mr-2 text-center">{{ download.quality }}</p>
-                        <div class="break-words flex items-center md:justify-start justify-center">
-                            <div v-for="url in download.downloads" class="mr-2"
-                                :key="url.id">
+                        <div class="break-words md:flex items-center md:justify-start justify-center">
+                            <div v-for="url in download.downloads" class="mr-2" :key="url.id">
                                 <a :href="url.url" class="hover:text-blue-500">{{ url.name }}</a>
                             </div>
-    
+
                         </div>
                     </div>
                 </div>
