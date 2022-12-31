@@ -11,10 +11,10 @@
         <NavRecom />
 
         <div class="md:flex w-full p-2 bg-white">
-            <div class="w-3/4">
+            <div class="md:w-3/4 w-full">
                 <slot />
             </div>
-            <div class="flex-shrink-0 md:w-64 w-1/4">
+            <div class="flex-shrink-0 md:w-1/4 w-full">
                 <Sidebar />
             </div>
         </div>
